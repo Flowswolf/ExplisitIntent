@@ -62,6 +62,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         _returnHasil = findViewById(R.id.returnHasil)
+        val _btnExplisit4 = findViewById<Button>(R.id.btnExplisit4)
+        _btnExplisit4.setOnClickListener {
+            val intentWithResult = Intent(
+                this@MainActivity,
+                MainActivity5::class.java
+            )
+            resultLauncher.launch(intentWithResult)
+        }
     }
     private lateinit var _returnHasil : TextView
     private val resultLauncher = registerForActivityResult(
